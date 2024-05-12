@@ -1,16 +1,16 @@
-import React, { useEffect } from "react";  // Importing necessary modules from React
-import Home from "./pages/Home/Home";  // Importing Home component
-import { Routes, Route, useNavigate } from "react-router-dom";  // Importing necessary modules from React Router
-import Login from "./pages/Login/Login";  // Importing Login component
-import Player from "./pages/Player/Player";  // Importing Player component
-import { onAuthStateChanged } from "firebase/auth";  // Importing onAuthStateChanged function from Firebase
-import { auth } from "./firebase";  // Importing Firebase authentication module
-import { ToastContainer, toast } from "react-toastify";  // Importing ToastContainer and toast from react-toastify
-import "react-toastify/dist/ReactToastify.css";  // Importing styles for react-toastify
+import React, { useEffect } from "react"; 
+import Home from "./pages/Home/Home"; 
+import { Routes, Route, useNavigate } from "react-router-dom";  
+import Login from "./pages/Login/Login"; 
+import Player from "./pages/Player/Player"; 
+import { onAuthStateChanged } from "firebase/auth";  
+import { auth } from "./firebase";  
+import { ToastContainer, toast } from "react-toastify";  
+import "react-toastify/dist/ReactToastify.css";  
 
-// Functional component for App
+
 const App = () => {
-  const navigate = useNavigate();  // Navigation hook
+  const navigate = useNavigate();  
 
   // Effect hook to handle user authentication state
   useEffect(() => {
@@ -39,4 +39,4 @@ const App = () => {
   );
 };
 
-export default App;  // Exporting the App component for use in other parts of the application
+export default App;

@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";  // Importing necessary modules from React
-import "./Player.css";  // Importing styles for the Player component
-import back_arrow_icon from "../../assets/back_arrow_icon.png";  // Importing back arrow icon
-import { useNavigate, useParams } from "react-router-dom";  // Importing hooks for navigation
+import React, { useEffect, useState } from "react"; 
+import "./Player.css";
+import back_arrow_icon from "../../assets/back_arrow_icon.png";
+import { useNavigate, useParams } from "react-router-dom"; 
 
-// Functional component for Player
+
 const Player = () => {
   // Retrieving parameters from URL
   const { id } = useParams();  // Extracting ID from URL parameters
-  const navigate = useNavigate();  // Navigation hook
+  const navigate = useNavigate();
 
   // State variable to store API data
   const [apiData, setApiData] = useState({
@@ -59,4 +59,4 @@ const Player = () => {
   );
 };
 
-export default Player;  // Exporting the Player component for use in other parts of the application
+export default Player;
