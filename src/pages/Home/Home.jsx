@@ -1,18 +1,17 @@
-import React from "react";  // Importing necessary modules from React
-import "./Home.css";  // Importing styles for the Home component
-import Navbar from "../../components/Navbar/Navbar";  // Importing Navbar component
-import hero_banner from "../../assets/hero_banner.jpg";  // Importing hero banner image
-import hero_title from "../../assets/hero_title.png";  // Importing hero title image
-import play_icon from "../../assets/play_icon.png";  // Importing play icon image
-import info_icon from "../../assets/info_icon.png";  // Importing info icon image
-import TitleCards from "../../components/TitleCards/TitleCards";  // Importing TitleCards component
-import Footer from "../../components/Footer/Footer";  // Importing Footer component
+import React from "react";  
+import "./Home.css";  
+import Navbar from "../../components/Navbar/Navbar";  
+import hero_banner from "../../assets/hero_banner.jpg";  
+import hero_title from "../../assets/hero_title.png";  
+import play_icon from "../../assets/play_icon.png";  
+import info_icon from "../../assets/info_icon.png";  
+import TitleCards from "../../components/TitleCards/TitleCards";  
+import Footer from "../../components/Footer/Footer"; 
 
-// Functional component for Home
 const Home = () => {
   return (
-    <div className="home">  {/* Home container */}
-      <Navbar />  {/* Navbar component */}
+    <div className="home">  
+      <Navbar />  
       <div className="hero">  {/* Hero section */}
         <img src={hero_banner} alt="" className="banner-img" />  {/* Hero banner image */}
         <div className="hero-caption">  {/* Hero caption */}
@@ -25,27 +24,27 @@ const Home = () => {
           </p>
           <div className="hero-btns">  {/* Hero buttons */}
             <button className="btn">  {/* Play button */}
-              <img src={play_icon} alt="" />  {/* Play icon */}
+              <img src={play_icon} alt="" /> 
               Play
             </button>
             <button className="btn dark-btn">  {/* More Info button */}
-              <img src={info_icon} alt="" />  {/* Info icon */}
+              <img src={info_icon} alt="" />  
               More Info
             </button>
           </div>
-          <TitleCards />  {/* TitleCards component */}
+          <TitleCards /> 
         </div>
       </div>
-      <div className="more-cards">  {/* More cards section */}
+      <div className="more-cards">
         {/* TitleCards components with different categories */}
         <TitleCards title={"Blockbuster Movies"} category={"top_rated"} />
         <TitleCards title={"Only on Netflix"} category={"popular"} />
         <TitleCards title={"Upcoming"} category={"upcoming"} />
         <TitleCards title={"Top Picks for You"} category={"now_playing"} />
       </div>
-      <Footer />  {/* Footer component */}
+      <Footer />  
     </div>
   );
 };
 
-export default Home;  // Exporting the Home component for use in other parts of the application
+export default Home; 

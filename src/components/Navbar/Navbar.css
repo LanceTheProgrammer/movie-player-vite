@@ -1,91 +1,91 @@
-/* Styling for the Navbar container */
+
 .navbar {
-    width: 100%;  /* Full width */
-    padding: 20px 6%;  /* Padding */
-    display: flex;  /* Flex display */
-    justify-content: space-between;  /* Space between items */
-    position: fixed;  /* Fixed position */
-    font-size: 14px;  /* Font size */
-    color: #e5e5e5;  /* Text color */
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);  /* Background gradient */
-    z-index: 1;  /* z-index to keep it above other elements */
+    width: 100%;  
+    padding: 20px 6%;  
+    display: flex;  
+    justify-content: space-between;  
+    position: fixed;  
+    font-size: 14px;  
+    color: #e5e5e5;
+    background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);  
+    z-index: 1;  
 }
 
 /* Styling for the left side of the navbar */
 .navbar-left {
-    display: flex;  /* Flex display */
-    align-items: center;  /* Align items vertically */
-    gap: 50px;  /* Gap between items */
+    display: flex;  
+    align-items: center;
+    gap: 50px;  
 }
 
 /* Styling for images in the left side of the navbar */
 .navbar-left img {
-    width: 90px;  /* Set width */
+    width: 90px;  
 }
 
 /* Styling for the navigation links */
 .navbar-left ul {
-    display: flex;  /* Flex display */
-    list-style: none;  /* Remove default list style */
-    gap: 20px;  /* Gap between items */
+    display: flex;  
+    list-style: none;
+    gap: 20px; 
 }
 
 /* Styling for individual navigation links */
 .navbar-left ul li {
-    cursor: pointer;  /* Change cursor to pointer */
+    cursor: pointer; 
 }
 
 /* Styling for the right side of the navbar */
 .navbar-right {
-    display: flex;  /* Flex display */
-    gap: 20px;  /* Gap between items */
-    align-items: center;  /* Align items vertically */
+    display: flex;  
+    gap: 20px;
+    align-items: center;
 }
 
 /* Styling for icons in the right side of the navbar */
 .navbar-right .icons {
-    width: 20px;  /* Set width */
-    cursor: pointer;  /* Change cursor to pointer */
+    width: 20px;
+    cursor: pointer;
 }
 
 /* Styling for profile image in the right side of the navbar */
 .navbar-right .profile {
-    border-radius: 4px;  /* Border radius */
-    width: 35px;  /* Set width */
+    border-radius: 4px;  
+    width: 35px; 
 }
 
 /* Styling for the profile dropdown */
 .navbar-profile {
-    display: flex;  /* Flex display */
-    align-items: center;  /* Align items vertically */
-    gap: 10px;  /* Gap between items */
-    cursor: pointer;  /* Change cursor to pointer */
-    position: relative;  /* Relative positioning */
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+    cursor: pointer;  
+    position: relative; 
 }
 
 /* Styling for the dropdown content */
 .navbar .dropdown {
-    position: absolute;  /* Absolute positioning */
+    position: absolute;  
     top: 100%;  /* Position below navbar-profile */
     right: 0;  /* Align to right */
     width: max-content;  /* Set width to fit content */
-    background: #191919;  /* Background color */
-    padding: 18px 22px;  /* Padding */
-    border-radius: 2px;  /* Border radius */
-    text-decoration: underline;  /* Underline text */
+    background: #191919; 
+    padding: 18px 22px;  
+    border-radius: 2px;
+    text-decoration: underline;
     z-index: 1;  /* z-index to keep it above other elements */
     display: none;  /* Initially hidden */
 }
 
 /* Styling for dropdown items */
 .navbar .dropdown p {
-    font-size: 13px;  /* Font size */
-    cursor: pointer;  /* Change cursor to pointer */
+    font-size: 13px; 
+    cursor: pointer;
 }
 
 /* Show dropdown on hover */
 .navbar-profile:hover .dropdown {
-    display: block;  /* Display dropdown on hover */
+    display: block;
 }
 
 /* Styling when navbar has scrolled down */

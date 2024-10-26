@@ -35,10 +35,10 @@ const Player = () => {
     )
       .then((response) => response.json())  // Parsing response JSON
       .then((response) => setApiData(response.results[0]))  // Setting API data to state
-      .catch((err) => console.error(err));  // Handling errors
+      .catch((err) => console.error(err)); 
   }, []);
 
-  // JSX structure representing the Player component
+  
   return (
     <div className="player">  {/* Player container */}
       <img src={back_arrow_icon} alt="" onClick={() => { navigate(-2) }} />  {/* Back arrow icon */}
@@ -51,7 +51,7 @@ const Player = () => {
         allowFullScreen
       ></iframe>
       <div className="player-info">  {/* Player info section */}
-        <p>{apiData.published_at}</p>  {/* Published date */}
+        <p>{apiData.published_at.slice(0,10)}</p>  {/* Published date */}
         <p>{apiData.name}</p>  {/* Video name */}
         <p>{apiData.type}</p>  {/* Video type */}
       </div>

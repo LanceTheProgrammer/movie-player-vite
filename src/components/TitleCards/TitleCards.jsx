@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";  // Importing necessary modules from React
-import "./TitleCards.css";  // Importing styles for the TitleCards component
-import cards_data from "../../assets/cards/Cards_data";  // Importing card data
-import { Link } from "react-router-dom";  // Importing Link component from react-router-dom
+import React, { useEffect, useRef, useState } from "react";  
+import "./TitleCards.css";  
+import cards_data from "../../assets/cards/Cards_data";  
+import { Link } from "react-router-dom";  
 
-// Functional component for TitleCards
+
 const TitleCards = ({ title, category }) => {
-  const [apiData, setApiData] = useState([]);  // State variable to store API data
+  const [apiData, setApiData] = useState([]);  
   const cardsRef = useRef();  // Creating a reference to the card list element
 
   // Options for the API request
@@ -34,12 +34,11 @@ const TitleCards = ({ title, category }) => {
     )
       .then((response) => response.json())  // Parse response as JSON
       .then((response) => setApiData(response.results))  // Update state with API data
-      .catch((err) => console.error(err));  // Error handling
+      .catch((err) => console.error(err)); 
 
     cardsRef.current.addEventListener("wheel", handleWheel);  // Add wheel event listener
-  }, []);  // Empty dependency array means this effect will only run once after the initial render
+  }, []);  // only run once after the initial render
 
-  // JSX structure representing the TitleCards component
   return (
     <div className="title-cards">
       <h2>{title ? title : "Popular on Netflix"}</h2>  {/* Title based on prop or default value */}
@@ -48,7 +47,7 @@ const TitleCards = ({ title, category }) => {
           return (
             <Link to={`/player/${card.id}`} className="card" key={index}>  {/* Link to individual card */}
               <img
-                src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path}  // Image source
+                src={`https://image.tmdb.org/t/p/w500` + card.backdrop_path} 
                 alt=""
               />
               <p>{card.original_title}</p>  {/* Card title */}
@@ -60,5 +59,5 @@ const TitleCards = ({ title, category }) => {
   );
 };
 
-export default TitleCards;  // Exporting the TitleCards component for use in other parts of the application
+export default TitleCards;
 

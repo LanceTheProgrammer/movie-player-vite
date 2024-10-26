@@ -1,12 +1,11 @@
-import React, { useState } from "react";  // Importing necessary modules from React
-import "./Login.css";  // Importing styles for the Login component
-import logo from "../../assets/logo.png";  // Importing Netflix logo image
-import { login, signup } from "../../firebase";  // Importing login and signup functions from firebase
-import netflix_spinner from "../../assets/netflix_spinner.gif";  // Importing Netflix spinner image
+import React, { useState } from "react"; 
+import "./Login.css"; 
+import logo from "../../assets/logo.png";
+import { login, signup } from "../../firebase";
+import netflix_spinner from "../../assets/netflix_spinner.gif";
 
-// Functional component for Login
+
 const Login = () => {
-  // State variables for login/signup form
   const [signState, setSignState] = useState("Sign In");  // State for sign in/up mode
   const [name, setName] = useState("");  // State for name input
   const [email, setEmail] = useState("");  // State for email input
@@ -25,7 +24,7 @@ const Login = () => {
     setLoading(false);  // Set loading state to false
   };
 
-  // JSX structure representing the Login component
+
   return loading ? (  // If loading state is true, show loading spinner
     <div className="login-spinner">
       <img src={netflix_spinner} alt="" />  {/* Netflix spinner image */}
@@ -79,7 +78,7 @@ const Login = () => {
         <div className="form-switch">  {/* Form switch section */}
           {signState === "Sign In" ? (  // If signState is "Sign In", show sign up link
             <p>
-              New to Netflix?{" "}
+              New to Netflix?
               <span
                 onClick={() => {
                   setSignState("Sign Up");
@@ -90,7 +89,7 @@ const Login = () => {
             </p>
           ) : (
             <p>  {/* If signState is "Sign Up", show sign in link */}
-              Already have an account?{" "}
+              Already have an account?
               <span
                 onClick={() => {
                   setSignState("Sign In");
@@ -106,4 +105,4 @@ const Login = () => {
   );
 };
 
-export default Login;  // Exporting the Login component for use in other parts of the application
+export default Login;

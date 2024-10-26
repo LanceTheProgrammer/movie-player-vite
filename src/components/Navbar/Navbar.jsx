@@ -1,15 +1,15 @@
-import React, { useEffect, useRef } from "react";  // Importing necessary modules from React
-import "./Navbar.css";  // Importing styles for the Navbar component
-import logo from "../../assets/logo.png";  // Importing the logo image
-import search_icon from "../../assets/search_icon.svg";  // Importing the search icon image
-import bell_icon from "../../assets/bell_icon.svg";  // Importing the bell icon image
-import profile_img from "../../assets/profile_img.png";  // Importing the profile image
-import caret_icon from "../../assets/caret_icon.svg";  // Importing the caret icon image
-import { logout } from "../../firebase";  // Importing the logout function from firebase
+import React, { useEffect, useRef } from "react";  
+import "./Navbar.css";  
+import logo from "../../assets/logo.png"; 
+import search_icon from "../../assets/search_icon.svg";  
+import bell_icon from "../../assets/bell_icon.svg";  
+import profile_img from "../../assets/profile_img.png";  
+import caret_icon from "../../assets/caret_icon.svg";  
+import { logout } from "../../firebase"; 
 
-// Functional component for Navbar
+
 const Navbar = () => {
-  const navRef = useRef();  // Creating a reference to the Navbar element
+  const navRef = useRef();
 
   // useEffect hook to handle scroll event and change navbar style
   useEffect(() => {
@@ -20,14 +20,13 @@ const Navbar = () => {
         navRef.current.classList.remove("nav-dark");  // Remove dark style class from navbar
       }
     });
-  }, []);  // Empty dependency array means this effect will only run once after the initial render
-
-  // JSX structure representing the Navbar component
+  }, []);
+ 
   return (
-    <div ref={navRef} className="navbar">  {/* Navbar container with ref to apply styles */}
+    <div ref={navRef} className="navbar">  
       <div className="navbar-left">  {/* Left side of the navbar */}
-        <img src={logo} alt="" />  {/* Logo image */}
-        <ul>  {/* Unordered list for navigation links */}
+        <img src={logo} alt="" />  
+        <ul>  
           <li>Home</li>
           <li>TV Shows</li>
           <li>Movies</li>
@@ -37,19 +36,19 @@ const Navbar = () => {
         </ul>
       </div>
       <div className="navbar-right">  {/* Right side of the navbar */}
-        <img src={search_icon} alt="" className="icons" />  {/* Search icon */}
-        <p>Children</p>  {/* Placeholder text */}
-        <img src={bell_icon} alt="" className="icons" />  {/* Bell icon */}
+        <img src={search_icon} alt="" className="icons" /> 
+        <p>Children</p> 
+        <img src={bell_icon} alt="" className="icons" /> 
         <div className="navbar-profile">  {/* Profile dropdown */}
-          <img src={profile_img} alt="" className="profile" />  {/* Profile image */}
-          <img src={caret_icon} alt="" />  {/* Caret icon for dropdown */}
-          <div className="dropdown">  {/* Dropdown content */}
+          <img src={profile_img} alt="" className="profile" />  
+          <img src={caret_icon} alt="" />  
+          <div className="dropdown">
             <p
               onClick={() => {
-                logout();  // Logout function call
+                logout();  //
               }}
             >
-              Sign Out of Netflix  {/* Dropdown item for signing out */}
+              Sign Out of Netflix  
             </p>
           </div>
         </div>
@@ -58,5 +57,5 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;  // Exporting the Navbar component for use in other parts of the application
+export default Navbar; 
 
